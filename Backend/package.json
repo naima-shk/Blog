@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "seed": "psql -f ./db/sql/database.sql",
     "lint": "eslint **/*.js"
   },
   "dependencies": {
