@@ -1,17 +1,21 @@
 {
-  "name": "Backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "naima ",
-  "license": "MIT",
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "eslint **/*.js"
+  },
   "dependencies": {
-    "modules": "^0.4.0",
-    "node": "^12.7.0"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pg-promise": "^8.7.5",
+    "pug": "2.0.0-beta11"
   },
-"scripts": {
-    "start": "node ./bin/www"
-  },
-"devDependencies": {
-    "react-scripts": "^3.0.1"
+  "devDependencies": {
+    "eslint": "^6.1.0"
   }
 }

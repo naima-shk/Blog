@@ -1,18 +1,22 @@
 {
-  "name": "Frontend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "naima",
-  "license": "MIT",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "modules": "^0.4.0",
-    "node": "^12.7.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "node scripts/start.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js"
   },
-  "devDependencies": {
-    "react-scripts": "^3.0.1"
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -25,5 +29,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:3001/"
 }

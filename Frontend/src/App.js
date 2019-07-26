@@ -1,24 +1,17 @@
-import React, { Component } from 'react';
-import Kids from './components/Kids/Kids';
-import Men from './components/Mens/Mens';
-import Women from './components/Womens/Womens';
-import PlusSize from './components/PlusSize/PlusSize';
-import Header from './components/Header/Header';
+import React from "react";
 import { Route, Switch } from "react-router-dom";
+import "./styles/App.css";
 
-export default class App extends Component{
-  
-  render(){
-    return(
-      <div>
-        <Header/>
-        <Switch>
-         <Route exact path="/" component={Kids} />
-         <Route path="/men" component={Men} />
-         <Route path="/women" component={Women} />
-         <Route path="/plussize" component={PlusSize} />
-        </Switch>
-      </div>
-    )
-  }
+import Home from "./pages/Home"
+
+const App = () => {
+  return (
+    <div className="App">
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </div>
+  );
 }
+
+export default App;

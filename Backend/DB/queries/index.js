@@ -1,26 +1,29 @@
 const { db } = require("../index");
 
-// get single user data
-const getUser = (id) => 
-{
-    db.one('SELECT * FROM users WHERE active = $1', id)
+const getAllPosts = (req, res, next) => {
+  db.any("SELECT * FROM posts")
     .then(data => {
-        console.log('our user data:', data);
-        return data.json();
+      res.status(200).json({
+        status: "sucess",
+        data: data,
+        message: "successfully fetched all posts"
+      });
     })
-    .catch(error => {
-        console.log('failed fetching user');
-        throw error;
+    .catch(err => {
+      next(err);
     });
-// new function //
-    const createUser =(id) =>
-    {
-        db.none('INSERT INTO  user (id,first_name, last_name,username,password_digest,email,phone)  VALUES (${id,first_name, last_name,username,password_digest,email,phone}, ${this})'),{
+};
 
-        }
-    }
+const addPost = data => {
+  db.none(
+    "INSERT INTO post (markdown_text) VALUES (${markdown})",
+    { markdown: data.markdown_text }
+  ).catch(err => {
+    throw err;
+  });
 };
 
 module.exports = {
-    getUser
-}
+  getAllPosts,
+  addPost
+};

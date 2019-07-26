@@ -1,5 +1,5 @@
 let pgp = require("pg-promise")({});
-let connectionString = "postgres://localhost/store";
+let connectionString = "postgres://localhost/blog";
 let db = pgp(connectionString);
 
 module.exports = {
