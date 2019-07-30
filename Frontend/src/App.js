@@ -3,10 +3,10 @@ import { Route, Switch } from "react-router-dom";
 import "./styles/App.css";
 
 import Home from "./pages/Home";
-import about from "./pages/about";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Social from "./pages/Social";
-import contact from "./pages/contact";
+import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 
 const App = () => {
@@ -14,11 +14,11 @@ const App = () => {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={about} />
+        <Route exact path="/About" component={About} />
         <Route exact path="/Projects" component={Projects} />
         <Route exact path="/Blog" component={Blog} />
         <Route exact path="/Social" component={Social} />
-        <Route exact path="/Contact" component={contact} />
+        <Route exact path="/Contact" component={Contact} />
       </Switch>
     </div>
   );
