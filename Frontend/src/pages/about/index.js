@@ -1,6 +1,6 @@
 import React from './node_modules/react';
 
-const about = () => {
+const About = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,4 +10,4 @@ const about = () => {
   );
 }
 
-export default about;
+export default About;
