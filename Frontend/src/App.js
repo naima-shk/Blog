@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import {Link,Navigation} from "react-router-dom";
+import { Route, Switch,Link } from "react-router-dom";
+//import {Link} from "react-router-dom";
+//import { Navigation} from "react-router-dom";
 //import "./styles/App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,17 +11,29 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import styled from 'styled-components';
 
+const nav= styled.nav`
+font-size: 1.5em;
+text-align: center;
+color: palevioletred;
+`;
+
+const Link = styled.Link`
+  padding: 4em;
+  background: papayawhip;
+  `;
+
+
 const App = () => {
   return (
     <div className="App">
-      <Navigation>
+      <nav>
         <Link to="/"> Home</Link>
         <Link to="/About">About</Link>
         <Link to="/Contact">Contact</Link>
         <Link to="/Projects">Projects</Link>
         <Link to="/Blog">Blog</Link>
         <Link to="/Social">Social</Link>
-      </Navigation>
+      </nav>
       
       <Switch>
         <Route exact path="/" component={Home} />
