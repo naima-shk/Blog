@@ -1,40 +1,36 @@
 import React from "react";
-import { Route, Switch,Link } from "react-router-dom";
-//import {Link} from "react-router-dom";
-//import { Navigation} from "react-router-dom";
-//import "./styles/App.css";
+import { Route, Switch, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Social from "./pages/Social";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const nav= styled.nav`
-font-size: 1.5em;
-text-align: center;
-color: palevioletred;
+const Nav = styled.nav`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
 `;
 
-const Link = styled.Link`
+const NavLink = styled(Link)`
   padding: 4em;
   background: papayawhip;
-  `;
-
+`;
 
 const App = () => {
   return (
     <div className="App">
-      <nav>
-        <Link to="/"> Home</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Contact">Contact</Link>
-        <Link to="/Projects">Projects</Link>
-        <Link to="/Blog">Blog</Link>
-        <Link to="/Social">Social</Link>
-      </nav>
-      
+      <Nav>
+        <NavLink to="/"> Home</NavLink>
+        <NavLink to="/About">About</NavLink>
+        <NavLink to="/Contact">Contact</NavLink>
+        <NavLink to="/Projects">Projects</NavLink>
+        <NavLink to="/Blog">Blog</NavLink>
+        <NavLink to="/Social">Social</NavLink>
+      </Nav>
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/About" component={About} />
@@ -45,6 +41,6 @@ const App = () => {
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
