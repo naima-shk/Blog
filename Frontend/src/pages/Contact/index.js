@@ -1,9 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 
 
-export default class Button extends Component {
-  // Info on React PropTypes:
-  // https://facebook.github.io/react/docs/typechecking-with-proptypes.html
+export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClicked: false,
+    };
+    this.logFormDataToConsole = this.logFormDataToConsole.bind(this);
+  }
+
   static propTypes = {
     email: PropTypes.string.isRequired,
     formValues: PropTypes.shape({
@@ -12,14 +18,6 @@ export default class Button extends Component {
       message: PropTypes.string.isRequired,
     }).isRequired,
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      isClicked: false,
-    };
-    this.logFormDataToConsole = this.logFormDataToConsole.bind(this);
-  }
 
   logFormDataToConsole(event) {
     console.log('Form Values', this.props.formValues);
