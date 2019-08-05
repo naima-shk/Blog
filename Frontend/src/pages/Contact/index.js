@@ -1,13 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
-
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isClicked: false,
     };
-    this.logFormDataToConsole = this.logFormDataToConsole.bind(this);
   }
 
   static propTypes = {
@@ -19,7 +17,7 @@ export default class Contact extends Component {
     }).isRequired,
   };
 
-  logFormDataToConsole(event) {
+  logFormDataToConsole = (event) => {
     console.log('Form Values', this.props.formValues);
     this.setState({ isClicked: true });
   }
