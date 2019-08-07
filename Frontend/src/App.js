@@ -22,12 +22,20 @@ const Contact = styled.a`
   padding: 4em;
   background: papayawhip;
 `
+const StyledHome=styled(Route)`
+padding-right: 5em;
+margin: 2em;
+color: palevioletred;
+background: papayawhip;
+border: none;
+border-radius: 3px;
+`;
 
 const App = () => {
   return (
     <div className="App">
       <Nav>
-        <NavLink to="/"> Home</NavLink>
+        < NavLink to="/"> Home</ NavLink>
         <NavLink to="/About">About</NavLink>
         <NavLink to="/Projects">Projects</NavLink>
         <NavLink to="/Blog">Blog</NavLink>
