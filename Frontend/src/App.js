@@ -7,6 +7,10 @@ import Social from "./pages/Social";
 import Blog from "./pages/Blog";
 import styled from "styled-components";
 
+  
+
+
+
 const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -14,8 +18,11 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+
+
 const App = () => {
   return (
+    
     <Container>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -24,8 +31,9 @@ const App = () => {
         <Route exact path="/Blog" component={Blog} />
         <Route exact path="/Social" component={Social} />
       </Switch>
+      
     </Container>
   );
 };
 
-export default App;
+export default App  ;
