@@ -6,9 +6,15 @@ import Projects from "./pages/Projects";
 import Social from "./pages/Social";
 import Blog from "./pages/Blog";
 import styled from "styled-components";
+import Navbar from "./components/Navbar";
 
 const Container = styled.div`
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   height: 100vh;
+  background-color: papayawhip;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +30,7 @@ const App = () => {
         <Route exact path="/Blog" component={Blog} />
         <Route exact path="/Social" component={Social} />
       </Switch>
+      <Navbar />
     </Container>
   );
 };
