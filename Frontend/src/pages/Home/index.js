@@ -1,12 +1,33 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "../../components/Navbar";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Greeting = styled.h1`
+  display: flex;
+  justify-content: center;
+`;
+
+const Description = styled.h2`
+  display: flex;
+  justify-content: center;
+`;
 
 function Home() {
-  const greeting = 'Hi this is naima !';
-  const happy='A full stack JavaScript Developer From Pakistan ';
-
-  return <div><h1>{greeting}</h1>,
-       <h2>{happy}</h2></div>;
-
+  const greeting = "Hi I'm Naima!";
+  const description = "A Full Stack Developer From Pakistan";
+  return (
+    <Container>
+      <Greeting>{greeting}</Greeting>
+      <Description>{description}</Description>
+      <Navbar />
+    </Container>
+  );
 }
 
 export default Home;

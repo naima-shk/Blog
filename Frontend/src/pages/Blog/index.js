@@ -1,12 +1,16 @@
 import React from 'react';
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const Blog = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Container>
         Naima's Blog :)
-      </header>
-    </div>
+    </Container>
   );
 }
 
