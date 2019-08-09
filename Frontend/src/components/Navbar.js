@@ -19,6 +19,13 @@ const NavLink = styled(Link)`
   background: papayawhip;
 `;
 
+const ContactLink = styled.a`
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background: papayawhip;
+`;
+
 const Navbar = () => {
   return (
     <Container>
@@ -28,9 +35,9 @@ const Navbar = () => {
         <NavLink to="/Projects">Projects</NavLink>
         <NavLink to="/Blog">Blog</NavLink>
         <NavLink to="/Social">Social</NavLink>
-        <NavLink href="mailto:naimashaikh550@gmail.com?subject=Contact Form">
+        <ContactLink href="mailto:naimashaikh550@gmail.com?subject=Contact Form">
           Contact
-        </NavLink>
+        </ContactLink>
       </Nav>
     </Container>
   );
