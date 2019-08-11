@@ -26,7 +26,6 @@ function Home() {
       <Greeting>{greeting}</Greeting>
       <Description>{description}</Description>
       <Navbar />
-      
     </Container>
   );
 }

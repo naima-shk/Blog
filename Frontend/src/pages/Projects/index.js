@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import BackLink from "../../components/BackLink";
 const Container = styled.div`
@@ -14,12 +14,10 @@ const Text = styled.p`
 const Projects = () => {
   return (
     <Container>
-<BackLink />
+      <BackLink />
       <Text>Here's what i made!</Text>
-
-        
     </Container>
   );
-}
+};
 
 export default Projects;
