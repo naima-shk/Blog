@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const BackLinkContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  color: black;
 `;
 
 const NavLink = styled(Link)`
