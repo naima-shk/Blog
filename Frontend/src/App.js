@@ -6,7 +6,6 @@ import Projects from "./pages/Projects";
 import Social from "./pages/Social";
 import Blog from "./pages/Blog";
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
 
 const Container = styled.div`
   margin: 0;
@@ -30,7 +29,6 @@ const App = () => {
         <Route exact path="/Blog" component={Blog} />
         <Route exact path="/Social" component={Social} />
       </Switch>
-      <Navbar />
     </Container>
   );
 };

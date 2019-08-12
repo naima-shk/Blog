@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const MainText = styled.h1`
-  display: block;
+  display: flex;
   justify-content: center;
   margin: 25px 0 10px 25px;
   font-size: 20px;
@@ -17,7 +17,7 @@ const MainText = styled.h1`
 `;
 
 const SubText = styled.p`
-  display: block;
+  display: flex;
   justify-content: center;
   margin: 25px 0 10px 25px;
   font-size: 16px;
@@ -35,10 +35,11 @@ const SkillsList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const Skill = styled.li`
-  display: block;
+  display: flex;
   justify-content: center;
   margin-right: 10px;
   font-size: 14px;
