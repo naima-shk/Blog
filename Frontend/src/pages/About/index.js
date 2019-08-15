@@ -6,6 +6,7 @@ const Container = styled.div`
   display: block;
   flex-direction: column;
   height: 100vh;
+ 
 `;
 
 const MainText = styled.h1`

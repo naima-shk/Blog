@@ -2,21 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+
+`;
 
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 12px;
-  color: palevioletred;
+  font-size: 15px;
 `;
 
 const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
   padding: 10px;
-  background: papayawhip;
+
 `;
 
 const ContactLink = styled.a`
@@ -24,6 +25,7 @@ const ContactLink = styled.a`
   color: black;
   padding: 10px;
   background: papayawhip;
+ 
 `;
 
 const Navbar = () => {

@@ -9,11 +9,9 @@ import styled from "styled-components";
 
 const Container = styled.div`
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Cormorant;
   height: 100vh;
-  background-color: papayawhip;
+  background-color:papayawhip ;
   display: flex;
   flex-direction: column;
   justify-content: center;
