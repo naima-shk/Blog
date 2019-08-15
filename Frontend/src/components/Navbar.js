@@ -13,33 +13,34 @@ const Nav = styled.nav`
   font-size: 15px;
 `;
 
-const NavLink = styled(Link)`
+const PageLink = styled(Link)`
   text-decoration: none;
   color: black;
   padding: 10px;
-
 `;
 
-const ContactLink = styled.a`
+const ExternalLink = styled.a`
   text-decoration: none;
   color: black;
   padding: 10px;
   background: papayawhip;
- 
 `;
 
 const Navbar = () => {
   return (
     <Container>
       <Nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/Projects">Projects</NavLink>
-        <NavLink to="/Blog">Blog</NavLink>
-        <NavLink to="/Social">Social</NavLink>
-        <ContactLink href="mailto:naimashaikh550@gmail.com?subject=Contact Form">
+        <PageLink to="/About">About</PageLink>
+        <PageLink to="/Blog">Blog</PageLink>
+        <ExternalLink href="https://github.com/naimiii">
+          Github
+        </ExternalLink>
+        <ExternalLink href="https://twitter.com/NaimaShaykh">
+          Twitter
+        </ExternalLink>
+        <ExternalLink href="mailto:naimashaikh550@gmail.com?subject=Contact Form">
           Contact
-        </ContactLink>
+        </ExternalLink>
       </Nav>
     </Container>
   );
