@@ -23,7 +23,6 @@ const ExternalLink = styled.a`
   text-decoration: none;
   color: black;
   padding: 10px;
-  background: papayawhip;
 `;
 
 const Navbar = () => {
