@@ -13,7 +13,7 @@ const MainText = styled.h1`
   display: flex;
   justify-content: center;
   margin: 25px 0 10px 25px;
-  font-size: 20px;
+  font-size: 25px;
   color: #a55959;
 `;
 
@@ -21,7 +21,7 @@ const SubText = styled.p`
   display: flex;
   justify-content: center;
   margin: 25px 0 10px 25px;
-  font-size: 16px;
+  font-size: 19px;
   color: #a55959;
 `;
 
@@ -43,7 +43,7 @@ const Skill = styled.li`
   display: flex;
   justify-content: center;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 17px;
   color: #a55959;
 `;
 

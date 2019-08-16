@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import styled from "styled-components";
+//mport Background  from '../../../Image/coding duck1.png';
 
 const Container = styled.div`
   margin: 0;
@@ -13,6 +14,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 `;
 
 const App = () => {

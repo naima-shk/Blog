@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
-
+//import Image  from '../Image/coding duck1.png';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 `;
 
 const Greeting = styled.h1`
@@ -21,10 +22,12 @@ const Description = styled.h2`
 function Home() {
   const greeting = "Hi I'm Naima!";
   const description = "A Full Stack Developer From Pakistan";
+  
   return (
     <Container>
       <Greeting>{greeting}</Greeting>
       <Description>{description}</Description>
+      
       <Navbar />
     </Container>
   );
