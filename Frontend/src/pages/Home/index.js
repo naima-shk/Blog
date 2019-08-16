@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
-//import Image  from '../Image/coding duck1.png';
+import backgroundImage from "../Image/myimage.PNG";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  background-image:  url(${backgroundImage});
 `;
 
 const Greeting = styled.h1`
