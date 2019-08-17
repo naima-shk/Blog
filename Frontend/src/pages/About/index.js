@@ -28,6 +28,7 @@ const SubText = styled.p`
 
 
 
+
 const Quote = styled.b`
   display: flex;
   justify-content: flex-start;
@@ -60,7 +61,7 @@ const allQuotes = [
 ];
 
 const skills = ["React", "HTML", "CSS", "Node.js", "PostgreSQL", "SQL"];
-
+const CurrentlyUsing=["Local Machine: dell inspiron (Core i5 ,7th Generation)", "Editor: Visual Studio Code", "News Letter: Medium"];
 const About = () => {
   const [quote, setQuote] = useState(allQuotes[5]);
 
@@ -74,7 +75,14 @@ const About = () => {
       <MainText>I'm a Javascipt Developer from Pakistan.</MainText>
       <SubText>I build applications and tools for the Web on the Web.  </SubText>
       <SubText>I started this website as a place to document everything I learned while going through</SubText>
+      <SubText>I aim to build things from scratch and contribute in open source projects.</SubText>
       <SubText>Skills:</SubText>
+      <SubText>CurrentlyUsing :</SubText>
+      <CurrentlyUsing>
+        {CurrentlyUsing.map(Current =>{
+          return <Current>{Current}</Current>;
+        })}
+      </CurrentlyUsing>
       <SkillsList>
         {skills.map(skill => {
           return <Skill>{skill}</Skill>;
