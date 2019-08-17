@@ -24,6 +24,21 @@ const SubText = styled.p`
   font-size: 19px;
   color: #a55959;
 `;
+const CurrentlyUsing = styled.ul`
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 10px 25px;
+  font-size: 19px;
+  color: #a55959;
+`;
+
+const Current = styled.li`
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 10px 25px;
+  font-size: 19px;
+  color: #a55959;
+  `;
 
 
 
