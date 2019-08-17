@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
-import background from "../../assets/background.png";
+//import background from "../../assets/background.png";
 
 const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image:  url(${background});
+ 
 `;
 
 const Greeting = styled.h1`

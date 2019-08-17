@@ -25,6 +25,9 @@ const SubText = styled.p`
   color: #a55959;
 `;
 
+
+
+
 const Quote = styled.b`
   display: flex;
   justify-content: flex-start;
@@ -69,13 +72,16 @@ const About = () => {
       <BackLink />
       <Quote onClick={changeQuote}>{quote}</Quote>
       <MainText>I'm a Javascipt Developer from Pakistan.</MainText>
-      <SubText>I build applications and tools for the Web on the Web.</SubText>
+      <SubText>I build applications and tools for the Web on the Web.  </SubText>
+      <SubText>I started this website as a place to document everything I learned while going through</SubText>
       <SubText>Skills:</SubText>
       <SkillsList>
         {skills.map(skill => {
           return <Skill>{skill}</Skill>;
         })}
       </SkillsList>
+
+      
     </Container>
   );
 };
