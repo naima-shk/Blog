@@ -76,7 +76,7 @@ const allQuotes = [
 ];
 
 const skills = ["React", "HTML", "CSS", "Node.js", "PostgreSQL", "SQL"];
-const CurrentlyUsing=["Local Machine: dell inspiron (Core i5 ,7th Generation)", "Editor: Visual Studio Code", "News Letter: Medium"];
+const tools =["Local Machine: dell inspiron (Core i5 ,7th Generation)", "Editor: Visual Studio Code", "News Letter: Medium"];
 const About = () => {
   const [quote, setQuote] = useState(allQuotes[5]);
 
@@ -92,20 +92,18 @@ const About = () => {
       <SubText>I started this website as a place to document everything I learned while going through</SubText>
       <SubText>I aim to build things from scratch and contribute in open source projects.</SubText>
       <SubText>Skills:</SubText>
-      <SubText>CurrentlyUsing :</SubText>
-      <CurrentlyUsing>
-        {CurrentlyUsing.map(Current =>{
-          return <Current>{Current}</Current>;
-        })}
-      </CurrentlyUsing>
       <SkillsList>
         {skills.map(skill => {
           return <Skill>{skill}</Skill>;
         })}
       </SkillsList>
-
-      
-    </Container>
+      <SubText>CurrentlyUsing :</SubText>
+      <CurrentlyUsing>
+        {tools.map(tools  => {
+          return <Current>{tools}</Current>;
+        })}
+      </CurrentlyUsing>
+     </Container>
   );
 };
 
