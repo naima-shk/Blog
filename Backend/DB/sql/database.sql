@@ -3,8 +3,9 @@ CREATE DATABASE blog;
 
 \c blog;
 
-CREATE TABLE posts (
+CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
-  time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  markdown_text TEXT NOT NULL
+  user_name VARCHAR NOT NULL,
+  comment VARCHAR NOT NULL,
+  time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
