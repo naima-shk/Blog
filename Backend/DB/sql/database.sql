@@ -7,5 +7,6 @@ CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   user_name VARCHAR NOT NULL,
   comment VARCHAR NOT NULL,
+  blog_id INTEGER NOT NULL,
   time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
