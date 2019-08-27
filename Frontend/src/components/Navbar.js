@@ -27,8 +27,8 @@ const Navbar = () => {
   return (
     <Container>
       <Nav>
-        <PageLink to="/About">About</PageLink>
-        <PageLink to="/Blog">Blog</PageLink>
+        <PageLink to="/about">About</PageLink>
+        <PageLink to="/blog">Blog</PageLink>
         <ExternalLink href="https://github.com/naimiii">
           Github
         </ExternalLink>
