@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BackLink from "../../components/BackLink";
 
 const Container = styled.div`
@@ -13,11 +14,17 @@ const Text = styled.p`
   justify-content: center;
 `;
 
+const LinkToPost = styled(Link)`
+  display: flex;
+  margin-left: 25px;
+`;
+
 const Blog = () => {
   return (
     <Container>
       <BackLink />
-      <Text>My Blog!</Text>
+      <Text>My Blog posts!</Text>
+      <LinkToPost to="/blog/1">First Post!</LinkToPost>
     </Container>
   );
 };
