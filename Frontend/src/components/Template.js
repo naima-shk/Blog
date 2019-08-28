@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react";
 
 const Container = styled.div`
   display: inline;
@@ -11,7 +11,7 @@ const Container = styled.div`
 const Template = ({ source }) => {
   return (
     <Container>
-        <ReactMarkdown source={source} />
+        <markdown-loader source={source} />
     </Container>
   );
 };
