@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import resume from "../assets/Naima_Shaikh_Resume.pdf"
 
 const Container = styled.div``;
 
@@ -39,6 +40,9 @@ const Navbar = () => {
         </ExternalLink>
         <ExternalLink href="mailto:naimashaikh550@gmail.com?subject=Contact Form">
           Contact
+        </ExternalLink>
+        <ExternalLink href={resume}>
+          Resume
         </ExternalLink>
       </Nav>
     </Container>
