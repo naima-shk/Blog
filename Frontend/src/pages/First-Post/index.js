@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import BackLink from "../../components/BackLink";
 import Template from "../../components/Template";
@@ -7,25 +7,26 @@ import firstPost from "../../assets/Blog-posts/first-post/index.md";
 const Container = styled.div`
   display: inline;
   justify-content: center;
-  height: 700vh;
+  height: 100vh;
 `;
 
-const Text = styled.p`
-  display: flex;
-  justify-content: center;
-`;
-
-const PostContainer = styled.div`
-  height: 600px;
-`;
+const PostContainer = styled.div``;
 
 const FirstPost = () => {
+  const [post, setPost] = useState(null);
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(firstPost);
+      const data = await res.text();
+      setPost(data);
+    })();
+  });
+
   return (
     <Container>
       <BackLink />
-      <Text>My First Blog Post!</Text>
       <PostContainer>
-        <Template source={firstPost} />
+        <Template source={post} />
       </PostContainer>
     </Container>
   );

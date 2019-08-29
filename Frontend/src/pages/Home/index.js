@@ -13,16 +13,18 @@ const Container = styled.div`
 
 const Greeting = styled.h1`
   display: flex;
+  font-size: 38px;
   justify-content: center;
 `;
 
 const Description = styled.h2`
   display: flex;
   justify-content: center;
+  font-size: 20px;
 `;
 
 function Home() {
-  const greeting = "Hi I'm Naima!";
+  const greeting = "Hi, I'm Naima!";
   const description = "A Full Stack Developer From Pakistan";
   
   return (

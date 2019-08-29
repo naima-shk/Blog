@@ -16,7 +16,7 @@ const Text = styled.p`
 
 const LinkToPost = styled(Link)`
   display: flex;
-  margin-left: 25px;
+  color: black;
 `;
 
 const Blog = () => {

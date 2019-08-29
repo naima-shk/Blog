@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "markdown-to-jsx": "^6.10.3",
     "node": "^12.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -33,5 +34,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001/"
+  "proxy": "http://localhost:3001/",
+  "devDependencies": {}
 }

@@ -18,7 +18,9 @@ const NavLink = styled(Link)`
 const BackLink = () => {
   return (
     <BackLinkContainer>
-      <NavLink to="/">Back to Home page!</NavLink>
+      <NavLink to="/">
+        <i className="material-icons">keyboard_backspace</i>
+      </NavLink>
     </BackLinkContainer>
   );
 };

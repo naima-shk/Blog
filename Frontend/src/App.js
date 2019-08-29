@@ -7,14 +7,15 @@ import FirstPost from "./pages/First-Post";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin: 0;
-  font-family: Cormorant;
-  height: 100vh;
-  background-color:papayawhip ;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  max-width: 728px;
+  height: 100vh;
+  margin: 0;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  background-color: papayawhip;
+  margin: 0 auto;
 `;
 
 const App = () => {

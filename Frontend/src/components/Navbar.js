@@ -15,12 +15,14 @@ const PageLink = styled(Link)`
   text-decoration: none;
   color: black;
   padding: 10px;
+  font-size: 18px;
 `;
 
 const ExternalLink = styled.a`
   text-decoration: none;
   color: black;
   padding: 10px;
+  font-size: 18px;
 `;
 
 const Navbar = () => {

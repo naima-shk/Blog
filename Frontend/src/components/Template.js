@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 
 const Container = styled.div`
-  display: inline;
-  justify-content: center;
-  height: 700vh;
+  display: flex;
+  flex-direction: column;
+  max-width: inherit;
+  padding-right: 24px;
+  padding-left: 24px;
 `;
+
+const Span = styled.span``;
 
 const Template = ({ source }) => {
   return (
     <Container>
-        <ReactMarkdown source={source} />
+      <Span>{source ? <Markdown children={source} /> : null}</Span>
     </Container>
   );
 };
