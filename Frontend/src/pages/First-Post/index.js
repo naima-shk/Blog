@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import BackLink from "../../components/BackLink";
 import Template from "../../components/Template";
-import firstPost from "../../assets/Blog-posts/first-post/index.md";
+import firstPost from "../../assets/blog-posts/first-post/index.mdx";
 
 const Container = styled.div`
   display: inline;

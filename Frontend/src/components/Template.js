@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Markdown from "markdown-to-jsx";
 
 const Container = styled.div`
   display: flex;
@@ -12,10 +11,10 @@ const Container = styled.div`
 
 const Span = styled.span``;
 
-const Template = ({ source }) => {
+const Template = ({ children }) => {
   return (
     <Container>
-      <Span>{source ? <Markdown children={source} /> : null}</Span>
+      <Span>{children ? { children } : <div>HELLO</div>}</Span>
     </Container>
   );
 };
