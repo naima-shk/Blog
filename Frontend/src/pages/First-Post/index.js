@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import BackLink from "../../components/BackLink";
 import Template from "../../components/Template";
-import firstPost from "../../assets/blog-posts/first-post/index.mdx";
+import FirstPost from "../../assets/blog-posts/first-post/index.mdx";
 
 const Container = styled.div`
   display: inline;
@@ -12,24 +12,15 @@ const Container = styled.div`
 
 const PostContainer = styled.div``;
 
-const FirstPost = () => {
-  const [post, setPost] = useState(null);
-  useEffect(() => {
-    (async () => {
-      const res = await fetch(firstPost);
-      const data = await res.text();
-      setPost(data);
-    })();
-  });
-
+const Introduction = () => {
   return (
     <Container>
       <BackLink />
       <PostContainer>
-        <Template source={post} />
+        <Template source={FirstPost} />
       </PostContainer>
     </Container>
   );
 };
 
-export default FirstPost;
+export default Introduction;

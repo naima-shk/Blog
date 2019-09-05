@@ -22,16 +22,14 @@ const LinkToPost = styled(Link)`
 
 const Blog = () => {
   useEffect(() => {
-    console.log('document', MDXDocument)
     console.log('metadata', metadata)
-  });
-
+    console.log('document', MDXDocument)
+  }, [])
   return (
     <Container>
       <BackLink />
       <Text>My Blog posts!</Text>
-      <LinkToPost to="/blog/1">First Post!</LinkToPost>
-      {/* <MDXDocument /> */}
+      {/* <LinkToPost to="/blog/1">First Post!</LinkToPost> */}
     </Container>
   );
 };

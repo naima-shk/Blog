@@ -25,6 +25,8 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const frontmatter = require('remark-frontmatter')
+const metadata = require('remark-metadata');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -316,6 +318,15 @@ module.exports = function(webpackEnv) {
           include: paths.appSrc,
         },
         {
+          test: /\.mdx?$/,
+          use: [
+            { loader: 'babel-loader' },
+            { loader: '@mdx-js/loader', options: {
+              remarkPlugins: [frontmatter, metadata]
+            }}
+          ]
+        },
+        {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
           // back to the "file" loader at the end of the loader list.
@@ -471,13 +482,6 @@ module.exports = function(webpackEnv) {
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
           ],
-        },
-        {
-          test: /\.mdx?$/,
-          use: [
-            'babel-loader',
-            '@mdx-js/loader'
-          ]
         },
       ],
     },

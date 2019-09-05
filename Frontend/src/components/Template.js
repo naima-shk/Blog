@@ -14,7 +14,7 @@ const Span = styled.span``;
 const Template = ({ children }) => {
   return (
     <Container>
-      <Span>{children ? { children } : <div>HELLO</div>}</Span>
+      <Span>{children ? { children } : null}</Span>
     </Container>
   );
 };
