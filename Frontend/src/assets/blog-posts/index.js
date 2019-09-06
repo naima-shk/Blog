@@ -1,5 +1,5 @@
-import { metadata } from "./first-post/index.mdx";
+import { metadata as firstPostMetdata } from "./first-post/index.mdx";
 
 export default [
-    metadata
+    firstPostMetdata
 ]
