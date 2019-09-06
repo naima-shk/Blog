@@ -1,2 +1,2 @@
-# Naima's Blog
+# [Naima's Blog](https://naimashaikh.dev)
 
