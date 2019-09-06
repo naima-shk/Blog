@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import BackLink from "../../components/BackLink";
-import MDXDocument, { metadata } from "../../assets/blog-posts/first-post/index.mdx";
+import blogsMetadata from "../../assets/blog-posts";
+import Template from "../../components/Template";
 
 const Container = styled.div`
   display: inline;
@@ -20,16 +21,18 @@ const LinkToPost = styled(Link)`
   color: black;
 `;
 
-const Blog = () => {
-  useEffect(() => {
-    console.log('metadata', metadata)
-    console.log('document', MDXDocument)
-  }, [])
+const Blog = ({ match }) => {
   return (
     <Container>
       <BackLink />
       <Text>My Blog posts!</Text>
-      {/* <LinkToPost to="/blog/1">First Post!</LinkToPost> */}
+      {blogsMetadata.map(blog => (
+        <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
+          {blog.title}
+        </LinkToPost>
+      ))}
+      {/* THIS ROUTE TAG DOESN'T WORK AND NEEDS TO BE FIXED */}
+      <Route path={`${match.path}/:blogId`} component={Template} />
     </Container>
   );
 };
