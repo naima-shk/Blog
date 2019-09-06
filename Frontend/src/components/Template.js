@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BackLink from "./BackLink";
 
 const Container = styled.div`
   display: flex;
@@ -11,10 +12,11 @@ const Container = styled.div`
 
 const Span = styled.span``;
 
-const Template = ({ children }) => {
+const Template = () => {
   return (
     <Container>
-      <Span>{children ? { children } : null}</Span>
+      <BackLink />
+      <Span>blog post is supposed to render</Span>
     </Container>
   );
 };
