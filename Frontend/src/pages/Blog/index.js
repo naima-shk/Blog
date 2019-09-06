@@ -20,15 +20,34 @@ const LinkToPost = styled(Link)`
   color: black;
 `;
 
+const Metadata = styled.div`
+  padding-left: 25px;
+`;
+
+const Date = styled.div`
+  font-size: 12px;
+`;
+
+const Description = styled.div`
+  font-size: 12px;
+`;
+
+
 const Blog = ({ match }) => {
   return (
     <Container>
       <BackLink to="/" />
       <Text>My Blog posts!</Text>
       {blogsMetadata.map(blog => (
-        <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
-          {blog.title}
-        </LinkToPost>
+        <div>
+          <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
+            {blog.title}
+          </LinkToPost>
+          <Metadata>
+            <Date>{ blog.date }</Date>
+            <Description>{ blog.description }</Description>
+          </Metadata>
+        </div>
       ))}
     </Container>
   );
