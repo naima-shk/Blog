@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BackLink from "../../components/BackLink";
 import blogsMetadata from "../../assets/blog-posts";
-import Template from "../../components/Template";
 
 const Container = styled.div`
   display: inline;
@@ -24,15 +23,13 @@ const LinkToPost = styled(Link)`
 const Blog = ({ match }) => {
   return (
     <Container>
-      <BackLink />
+      <BackLink to="/" />
       <Text>My Blog posts!</Text>
       {blogsMetadata.map(blog => (
         <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
           {blog.title}
         </LinkToPost>
       ))}
-      {/* THIS ROUTE TAG DOESN'T WORK AND NEEDS TO BE FIXED */}
-      <Route path={`${match.path}/:blogId`} component={Template} />
     </Container>
   );
 };

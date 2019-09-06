@@ -15,10 +15,10 @@ const NavLink = styled(Link)`
   background: papayawhip;
 `;
 
-const BackLink = () => {
+const BackLink = (props) => {
   return (
     <BackLinkContainer>
-      <NavLink to="/">
+      <NavLink to={props.to}>
         <i className="material-icons">keyboard_backspace</i>
       </NavLink>
     </BackLinkContainer>

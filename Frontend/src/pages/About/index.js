@@ -88,7 +88,7 @@ const About = () => {
 
   return (
     <Container>
-      <BackLink />
+      <BackLink to="/" />
       <Quote onClick={changeQuote}>{quote}</Quote>
       <MainText>I'm a Javascipt Developer from Pakistan.</MainText>
       <SubText>I build applications and tools for the Web on the Web. </SubText>

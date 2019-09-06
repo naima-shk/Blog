@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Template from "./components/Template";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -24,6 +25,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/blog" component={Blog} />
+        <Route path="/blog/:id" component={Template} />
       </Switch>
     </Container>
   );
