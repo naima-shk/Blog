@@ -94,10 +94,10 @@ const About = () => {
       <SubText>I build applications and tools for the Web on the Web. </SubText>
       <SubText>
         I started this website as a place to document everything I learned while
-        going through
+        going through this journey to better my skills.
       </SubText>
       <SubText>
-        I aim to build things from scratch and contribute in open source
+        I aim to build things from scratch and contribute to open source
         projects.
       </SubText>
       <SubText>Skills:</SubText>
