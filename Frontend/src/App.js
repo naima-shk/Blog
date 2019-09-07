@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Template from "./components/Template";
+import Footer from "./components/Footer";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -27,6 +28,7 @@ const App = () => {
         <Route exact path="/blog" component={Blog} />
         <Route path="/blog/:id" component={Template} />
       </Switch>
+      <Footer />
     </Container>
   );
 };
