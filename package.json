@@ -1,0 +1,11 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "Naima's Personal Site",
+  "scripts": {
+    "start": "cd Frontend && yarn build && yarn start"
+  },
+  "repository": "git@github.com:naimiii/Blog.git",
+  "author": "<naimashaikh550@gmail.com>",
+  "license": "MIT"
+}
