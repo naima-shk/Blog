@@ -1,29 +1,53 @@
 const { db } = require("../index");
 
-const getAllPosts = (req, res, next) => {
-  db.any("SELECT * FROM posts")
+const getBlogComments = (req, res, next) => {
+  db.any("SELECT * FROM comments WHERE blog_id=${blog_id}", {
+    blog_id: req.params.blog_id
+  })
     .then(data => {
       res.status(200).json({
-        status: "sucess",
+        status: ":)",
         data: data,
-        message: "successfully fetched all posts"
+        message: `got all comments for ${req.params.blog_id} from database.`
       });
     })
     .catch(err => {
-      next(err);
+      res.status(500).json({
+        status: ":(",
+        data: err,
+        message: `couldn't get all comments for ${req.params.blog_id} from database.`
+      });
     });
+  next();
 };
 
-const addPost = data => {
+const addComment = (req, res, next) => {
   db.none(
-    "INSERT INTO post (markdown_text) VALUES (${markdown})",
-    { markdown: data.markdown_text }
-  ).catch(err => {
-    throw err;
-  });
+    "INSERT INTO comments (users_name, comment, blog_id) VALUES (${users_name}, ${comment}, ${blog_id})",
+    {
+      users_name: req.body.users_name,
+      comment: req.body.comment,
+      blog_id: req.body.blog_id
+    }
+  )
+    .then(data => {
+      res.status(200).json({
+        status: ":)",
+        data: data,
+        message: "added comment to the database."
+      });
+    })
+    .catch(err => {
+      res.status(500).json({
+        status: ":(",
+        data: err,
+        message: "could not add comment to the database."
+      });
+    });
+  next();
 };
 
 module.exports = {
-  getAllPosts,
-  addPost
+  getBlogComments,
+  addComment
 };

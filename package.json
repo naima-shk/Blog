@@ -1,9 +1,10 @@
 {
   "name": "backend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "server": "node ./bin/www",
+    "client": "cd client && node scripts/start.js",
     "seed": "psql -f ./db/sql/database.sql",
     "lint": "eslint **/*.js"
   },
