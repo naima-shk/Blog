@@ -43,26 +43,9 @@ const Skill = styled.li`
   justify-content: center;
   margin-right: 10px;
   font-size: 17px;
-  color: #a55959;
-`;
-
-const Tools = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  font-size: 19px;
-  color: #a55959;
-`;
-
-const Tool = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Item = styled.div`
   font-weight: bold;
+  color: #a55959;
 `;
-
-const Description = styled.span``;
 
 const allQuotes = [
   `"Great things are done by a series of small things brought together."`,
@@ -74,11 +57,6 @@ const allQuotes = [
 ];
 
 const skills = ["React", "HTML", "CSS", "Node.js", "PostgreSQL", "SQL"];
-
-const tools = [
-  { Machine: "Dell Inspiron (Core i5, 7th Generation)" },
-  { Editor: "Visual Studio Code" }
-];
 
 const About = () => {
   const [quote, setQuote] = useState(allQuotes[5]);
@@ -106,19 +84,6 @@ const About = () => {
           return <Skill key={index}>{skill}</Skill>;
         })}
       </SkillsList>
-      <SubText>Currently Using:</SubText>
-      <Tools>
-        {tools.map((tool, index) => {
-          for (let key in tool) {
-            return (
-              <Tool key={index}>
-                <Item>{key}:</Item>
-                <Description>{tool[key]}</Description>
-              </Tool>
-            );
-          }
-        })}
-      </Tools>
     </Container>
   );
 };
