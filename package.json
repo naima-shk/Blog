@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "node ./bin/www",
+    "server": "node ./bin/www",
     "start": "cd client && yarn && yarn run build",
     "client": "cd client && node scripts/start.js",
     "seed": "psql -f ./db/sql/database.sql",
