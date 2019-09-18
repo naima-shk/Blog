@@ -38,8 +38,8 @@ const Blog = ({ match }) => {
     <Container>
       <BackLink to="/" />
       <Text>My Blog posts!</Text>
-      {blogsMetadata.map(blog => (
-        <div>
+      {blogsMetadata.map((blog, index) => (
+        <div key={index}>
           <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
             {blog.title}
           </LinkToPost>
