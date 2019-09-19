@@ -73,7 +73,7 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "proxy": "http://localhost:5000",
-  "homepage": "https://afternoon-caverns-74230.herokuapp.com/",
+  "homepage": "https://murmuring-bayou-10490.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
