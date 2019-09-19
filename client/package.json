@@ -72,6 +72,8 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
+  "proxy": "http://localhost:5000",
+  "homepage": "https://afternoon-caverns-74230.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -144,6 +146,5 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT",
-  "proxy": "http://localhost:3001"
+  "license": "MIT"
 }

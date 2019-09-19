@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.552a720a.chunk.css",
+    "main.js": "/static/js/main.f7b8cf73.chunk.js",
+    "main.js.map": "/static/js/main.f7b8cf73.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.1e33799c.chunk.js": "/static/js/2.1e33799c.chunk.js",
+    "static/js/2.1e33799c.chunk.js.map": "/static/js/2.1e33799c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a62a47dc20f67f58f124c3b471b0f760.js": "/precache-manifest.a62a47dc20f67f58f124c3b471b0f760.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.552a720a.chunk.css.map": "/static/css/main.552a720a.chunk.css.map",
+    "static/media/Naima_Shaikh_Resume.pdf": "/static/media/Naima_Shaikh_Resume.6909adee.pdf"
+  }
+}
