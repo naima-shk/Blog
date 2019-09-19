@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "node ./bin/www",
-    "start": "cd client && yarn && yarn run build",
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd client && yarn && yarn run build",
     "client": "cd client && node scripts/start.js",
     "seed": "psql -f ./db/sql/database.sql",
     "lint": "eslint **/*.js"
