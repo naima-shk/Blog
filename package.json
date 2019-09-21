@@ -8,7 +8,7 @@
     "lint": "eslint **/*.js",
     "seed": "psql -f ./db/sql/database.sql",
     "server": "node ./bin/www",
-    "start": "cd client && node scripts/start.js"
+    "start": "cd client && yarn && yarn build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
