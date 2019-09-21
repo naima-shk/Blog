@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
-    "client": "cd client && node scripts/start.js",
+    "lint": "eslint **/*.js",
     "seed": "psql -f ./db/sql/database.sql",
-    "lint": "eslint **/*.js"
+    "server": "node ./bin/www",
+    "start": "cd client && node scripts/start.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
