@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "client": "cd client && yarn start",
-    "heroku-postbuild": "cd client && yarn && yarn run build",
     "lint": "eslint **/*.js",
     "seed": "psql -f ./db/sql/database.sql",
     "server": "node ./bin/www",
-    "start": "cd client && yarn && yarn build"
+    "buildClient": "cd client && yarn && yarn build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
