@@ -10,6 +10,12 @@ const Container = styled.div`
   height: 700vh;
 `;
 
+const BlogList = styled.ul`
+  list-style: none;
+`;
+
+const BlogPost = styled.li``;
+
 const Text = styled.p`
   display: flex;
   justify-content: center;
@@ -24,7 +30,7 @@ const Metadata = styled.div`
   padding-left: 25px;
 `;
 
-const Date = styled.div`
+const PublishDate = styled.div`
   font-size: 12px;
 `;
 
@@ -38,17 +44,19 @@ const Blog = ({ match }) => {
     <Container>
       <BackLink to="/" />
       <Text>My Blog posts!</Text>
+      <BlogList>
       {blogsMetadata.map((blog, index) => (
-        <div key={index}>
+        <BlogPost key={index}>
           <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
             {blog.title}
           </LinkToPost>
           <Metadata>
-            <Date>{ blog.date }</Date>
+            <PublishDate>{ blog.date }</PublishDate>
             <Description>{ blog.description }</Description>
           </Metadata>
-        </div>
+        </BlogPost>
       ))}
+      </BlogList>
     </Container>
   );
 };

@@ -10,13 +10,11 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 728px;
+  justify-content: space-between;
   height: 100vh;
-  margin: 0;
   font-family: Menlo, Monaco, "Courier New", Courier, monospace;
   background-color: papayawhip;
-  margin: 0 auto;
+  margin: 0;
 `;
 
 const App = () => {

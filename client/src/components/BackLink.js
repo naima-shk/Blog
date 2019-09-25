@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const BackLinkContainer = styled.div`
   display: flex;
@@ -8,21 +8,21 @@ const BackLinkContainer = styled.div`
   color: black;
 `;
 
-const NavLink = styled(Link)`
+const Back = styled.div`
   text-decoration: none;
   color: black;
   padding: 10px;
   background: papayawhip;
 `;
 
-const BackLink = (props) => {
+const BackLink = ({ history }) => {
   return (
     <BackLinkContainer>
-      <NavLink to={props.to}>
+      <Back onClick={() => history.goBack()}>
         <i className="material-icons">keyboard_backspace</i>
-      </NavLink>
+      </Back>
     </BackLinkContainer>
   );
 };
 
-export default BackLink;
+export default withRouter(BackLink);

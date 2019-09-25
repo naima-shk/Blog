@@ -8,6 +8,10 @@ const Container = styled.div`
   height: 100vh;
 `;
 
+const TextContainer = styled.div`
+  margin: 10px;
+`;
+
 const MainText = styled.h1`
   display: flex;
   justify-content: center;
@@ -68,17 +72,21 @@ const About = () => {
     <Container>
       <BackLink to="/" />
       <Quote onClick={changeQuote}>{quote}</Quote>
-      <MainText>I'm a Javascipt Developer from Pakistan.</MainText>
-      <SubText>I build applications and tools for the Web on the Web. </SubText>
-      <SubText>
-        I started this website as a place to document everything I learned while
-        going through this journey to better my skills.
-      </SubText>
-      <SubText>
-        I aim to build things from scratch and contribute to open source
-        projects.
-      </SubText>
-      <SubText>Skills:</SubText>
+      <TextContainer>
+        <MainText>I'm a Javascipt Developer from Pakistan.</MainText>
+        <SubText>
+          I build applications and tools for the Web on the Web.{" "}
+        </SubText>
+        <SubText>
+          I started this website as a place to document everything I learned
+          while going through this journey to better my skills.
+        </SubText>
+        <SubText>
+          I aim to build things from scratch and contribute to open source
+          projects.
+        </SubText>
+        <SubText>Skills:</SubText>
+      </TextContainer>
       <SkillsList>
         {skills.map((skill, index) => {
           return <Skill key={index}>{skill}</Skill>;
