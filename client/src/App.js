@@ -17,7 +17,6 @@ const Container = styled.div`
   margin: 0;
 `;
 
-
 const App = () => {
   return (
     <Container>
