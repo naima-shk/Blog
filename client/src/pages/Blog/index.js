@@ -12,9 +12,12 @@ const Container = styled.div`
 
 const BlogList = styled.ul`
   list-style: none;
+  margin-left: 20%;
 `;
 
-const BlogPost = styled.li``;
+const BlogPost = styled.li`
+  margin: 25px 0 25px 0;
+`;
 
 const Text = styled.p`
   display: flex;
@@ -45,7 +48,7 @@ const Blog = ({ match }) => {
       <BackLink to="/" />
       <Text>My Blog posts!</Text>
       <BlogList>
-      {blogsMetadata.map((blog, index) => (
+      {blogsMetadata.reverse().map((blog, index) => (
         <BlogPost key={index}>
           <LinkToPost key={blog.id} to={`${match.url}/${blog.id}`}>
             {blog.title}
