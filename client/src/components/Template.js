@@ -3,7 +3,6 @@ import styled from "styled-components";
 import BackLink from "./BackLink";
 
 const Container = styled.div`
-  height: 100vh;
   display: flex;
   flex-direction: column;
   max-width: inherit;

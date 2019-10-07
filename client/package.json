@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
@@ -15,6 +15,7 @@
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
+    "axios": "^0.19.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "8.0.5",
@@ -72,6 +73,8 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
+  "proxy": "http://localhost:5000",
+  "homepage": "https://murmuring-bayou-10490.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -87,7 +90,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001/",
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0"

@@ -1,13 +1,13 @@
 {
   "name": "backend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cd client && node scripts/start.js",
-    "server": "node ./bin/www",
-    "client": "cd client && node scripts/start.js",
+    "client": "cd client && yarn start",
+    "lint": "eslint **/*.js",
     "seed": "psql -f ./db/sql/database.sql",
-    "lint": "eslint **/*.js"
+    "server": "node ./bin/www",
+    "buildClient": "cd client && yarn && yarn build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

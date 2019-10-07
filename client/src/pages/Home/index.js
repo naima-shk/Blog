@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +19,9 @@ const Description = styled.h2`
   display: flex;
   justify-content: center;
   font-size: 20px;
+  @media (max-width: 435px) {
+    font-size: 14px;
+  }
 `;
 
 function Home() {
