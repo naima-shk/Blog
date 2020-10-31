@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "client": "cd client && yarn start",
+    "clientInstall": "cd client && yarn",
     "lint": "eslint **/*.js",
     "seed": "psql -f ./db/sql/database.sql",
     "server": "node ./bin/www",
