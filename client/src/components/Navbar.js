@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import resume from "../assets/Naima_Shaikh_Resume.pdf";
+import resume from "../assets/Resume/Naima-Shaikh-CV.pdf";
 
 const Container = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const Navbar = () => {
       <Nav>
         <PageLink to="/about">About</PageLink>
         <PageLink to="/blog">Blog</PageLink>
-        <ExternalLink href="https://github.com/naimiii">Github</ExternalLink>
+        <ExternalLink href="https://github.com/naima-shk">Github</ExternalLink>
         <ExternalLink href="https://twitter.com/NaimaShaykh">
           Twitter
         </ExternalLink>
