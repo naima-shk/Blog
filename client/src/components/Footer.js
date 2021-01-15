@@ -26,7 +26,7 @@ const Navbar = () => {
       <Text>&copy; 2019 Built by Naima Shaikh.</Text>
       <Text>
         Check out the code on
-        <ExternalLink href="https://github.com/naimiii/Blog">
+        <ExternalLink href="https://github.com/naima-shk/Blog">
           Github
         </ExternalLink>
         .
